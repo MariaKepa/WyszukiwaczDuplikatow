@@ -7,11 +7,12 @@ import java.io.File;
 import java.util.List;
 
 public class ChooserComponentFactory {
-
+    // Fabryka wzorzec
     static public FileChooser CreateFileChooser(String title, List<FileChooser.ExtensionFilter> filters)
     {
         return CreateFileChooser(title, null, filters);
     }
+
 
     static public FileChooser CreateFileChooser(String title, String initialDirectory, List<FileChooser.ExtensionFilter> filters)
     {
@@ -24,6 +25,7 @@ public class ChooserComponentFactory {
         return fileChooser;
     }
 
+    // Fabryka wzorzec
     static public DirectoryChooser CreateDirectoryChooser(String title)
     {
         return CreateDirectoryChooser(title, null);

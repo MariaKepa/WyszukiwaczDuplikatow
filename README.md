@@ -6,22 +6,25 @@ Projekty implementacyjne powinny zawierać krótki dokument opisujący funkcjona
 
 
 
-- [ ] czy wykorzystano co najmniej trzy wzorce projektowe?
-
+- [x] czy wykorzystano co najmniej trzy wzorce projektowe?
+- Strategia, Dependency inversion, Fabryka,
 
 - [x] czy prawidłowo zdekomponowano odpowiedzialności?
 Tak.
+
 - [x] czy wykorzystano jakiś wzorzec architektoniczny?
 - Zastosowalam wzorzec architektoniczny MVC.
 
 - [x] czy projekt jest Mavenowy i czy poprawnie buduje się z linii komend?
-Tak
+Tak.
 
 - [x] czy budowany jest przez Mavena wykonywalny jar?
 - Tak, wykorzystano w tym celu maven-jar-plugin.
 
-- [ ] czy zrealizowano co najmniej 5 przykładowych testów jednostkowych?
-- [ ] czy testy jednostkowe mają status PASSED w trakcie procesu budowania projektu przez Mavena?
+- [x] czy zrealizowano co najmniej 5 przykładowych testów jednostkowych?
+Tak.
+- [x] czy testy jednostkowe mają status PASSED w trakcie procesu budowania projektu przez Mavena?
+Tak.
 - [x] czy projekt został umieszczony pod kontrolą wersji za pomocą Gita?
 Tak.
 - [x] czy struktura gałęzi repozytorium jest prawidłowo zarządzana?
@@ -31,4 +34,5 @@ Tak.
 - Użycie interfejsów możemy zaobserwować na przykład w IDuplicateChecker lub IDuplicateFinder.
 - Użycie klasy abstrakcyjnej możemy zobaczyć w klasie DuplicateFinder.
 
-- [] czy skorzystano z polimorfizmu?
+- [x] czy skorzystano z polimorfizmu?
+- W kodzie przy wzorcu strategi oraz w testach przy użyciu mocka komponentu DuplicateChecker.

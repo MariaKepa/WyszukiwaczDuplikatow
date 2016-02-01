@@ -12,6 +12,12 @@ public class ImageDuplicateFinder extends DuplicateFinder {
         super(checker);
     }
 
+    // Strategia, wzorzec
+    public void SetDuplicateChecker(IDuplicateChecker newChecker)
+    {
+        this.checker = newChecker;
+    }
+
     List<File> GetAllFiles(File folder)
     {
         List<File> allFiles = new ArrayList<>();
