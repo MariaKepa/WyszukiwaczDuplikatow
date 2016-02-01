@@ -1,5 +1,6 @@
 package com.zaliczenie.projekt;
 
+import javafx.application.Platform;
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
@@ -94,5 +95,21 @@ public class MainWindowController implements Initializable{
     @FXML
     public void removeFileOptionOnClick(ActionEvent actionEvent) {
         model.deleteDuplicates(imageCopiesList.getSelectionModel().getSelectedIndices());
+    }
+
+    @FXML
+    public void closeApplication(ActionEvent actionEvent) {
+        Platform.exit();
+        System.exit(0);
+    }
+
+    @FXML
+    public void showAboutInfo(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("O programie");
+        alert.setHeaderText(null);
+        alert.setContentText("To jest proggram będący projektem zaliczeniowym.\nAutor: Maria Kępa");
+
+        alert.showAndWait();
     }
 }

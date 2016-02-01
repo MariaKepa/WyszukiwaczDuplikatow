@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zaliczenie.projekt.MainWindowController">
+<VBox xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zaliczenie.projekt.MainWindowController">
    <children>
       <VBox>
          <children>
@@ -21,17 +21,12 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Program">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Zamknij" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edycja">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Usun wszystkie znalezione kopie" />
+                    <MenuItem mnemonicParsing="false" text="Zamknij" onAction="#closeApplication" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Pomoc">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="O programie" />
+                    <MenuItem mnemonicParsing="false" text="O programie" onAction="#showAboutInfo" />
                   </items>
                 </Menu>
               </menus>
@@ -44,12 +39,12 @@
                <children>
                   <VBox>
                      <children>
-                        <Button fx:id="chooseImageFile" mnemonicParsing="false" text="Wybierz obraz" onAction="#chooseImageFileOnClick">
+                        <Button fx:id="chooseImageFile" mnemonicParsing="false" onAction="#chooseImageFileOnClick" text="Wybierz obraz">
                            <VBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="chooseImageFolder" mnemonicParsing="false" text="Wybierz folder" onAction="#chooseImageFolderOnClick">
+                        <Button fx:id="chooseImageFolder" mnemonicParsing="false" onAction="#chooseImageFolderOnClick" text="Wybierz folder">
                            <VBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
@@ -81,7 +76,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </HBox>
-            <Button fx:id="searchImagesCopies" onAction="#searchImagesCopiesOnClick" alignment="CENTER" mnemonicParsing="false" text="Szukaj kopii" textAlignment="CENTER" textOverrun="CLIP" VBox.vgrow="ALWAYS">
+            <Button fx:id="searchImagesCopies" alignment="CENTER" mnemonicParsing="false" onAction="#searchImagesCopiesOnClick" text="Szukaj kopii" textAlignment="CENTER" textOverrun="CLIP" VBox.vgrow="ALWAYS">
                <font>
                   <Font size="18.0" />
                </font>
@@ -98,7 +93,7 @@
                <contextMenu>
                   <ContextMenu>
                     <items>
-                      <MenuItem fx:id="removeFileOption" onAction="#removeFileOptionOnClick" mnemonicParsing="false" text="Remove file" />
+                      <MenuItem fx:id="removeFileOption" mnemonicParsing="false" onAction="#removeFileOptionOnClick" text="Remove file" />
                     </items>
                   </ContextMenu>
                </contextMenu>
