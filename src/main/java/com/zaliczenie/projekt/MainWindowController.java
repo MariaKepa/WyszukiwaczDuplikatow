@@ -12,7 +12,11 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.DirectoryNotEmptyException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -36,14 +40,12 @@ public class MainWindowController implements Initializable{
     @FXML
     private ListView<String> imageCopiesList;
 
-    private ListProperty<String> listProperty = new SimpleListProperty<>();
+    DuplicatesModel model = new DuplicatesModel();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        listProperty.set(FXCollections.observableArrayList( new ArrayList<>()));
-
         imageCopiesList.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        imageCopiesList.itemsProperty().bind(listProperty);
+        imageCopiesList.itemsProperty().bind(model.getListProperty());
     }
 
 
@@ -82,11 +84,7 @@ public class MainWindowController implements Initializable{
             ImageDuplicateFinder finder = new ImageDuplicateFinder(new ImageDuplicateChecker());
             List<File> listFile = finder.findDuplicates(patternFile, imageDirectory);
 
-            listProperty.clear();
-            if(listFile != null)
-            {
-                listProperty.addAll(listFile.stream().map(File::getAbsolutePath).collect(Collectors.toList()));
-            }
+            model.updateDuplicateList(listFile);
         }
         catch (Exception e) {
             System.out.println(e.toString());
@@ -95,8 +93,6 @@ public class MainWindowController implements Initializable{
 
     @FXML
     public void removeFileOptionOnClick(ActionEvent actionEvent) {
-        List<Integer> ll = imageCopiesList.getSelectionModel().getSelectedIndices();
-        ll.forEach(System.out::println);
-        String selected_path = imageCopiesList.getSelectionModel().getSelectedItem();
+        model.deleteDuplicates(imageCopiesList.getSelectionModel().getSelectedIndices());
     }
 }
