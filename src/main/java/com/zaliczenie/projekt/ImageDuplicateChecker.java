@@ -2,8 +2,6 @@ package com.zaliczenie.projekt;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.PixelReader;
-import javafx.scene.paint.Color;
-
 import java.io.File;
 
 public class ImageDuplicateChecker implements IDuplicateChecker {
