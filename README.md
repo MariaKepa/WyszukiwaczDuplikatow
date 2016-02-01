@@ -1,9 +1,16 @@
 # WyszukiwaczDuplikatow
 Projekt zaliczeniowy nr 7
 
+Naszym zadaniem było stworzyć program pozwalający na wyszukiwanie duplikatów zdjęć.
+Do stworzenia GUI wykorzystałam JavaFx
+Do prostego używania JavaFx w mavenie wykorzystałam plugin 
+<groupId>com.zenjava</groupId>
+<artifactId>javafx-maven-plugin</artifactId>
 
-Projekty implementacyjne powinny zawierać krótki dokument opisujący funkcjonalności narzędzia i zastosowane wzorce projektowe, wraz z opisem problemu, do rozwiązania którego zostały zastosowane.
-
+W programie wykorzystałam wzorce
+- fabryki do tworzenia odpowiednich kontrolek graficznych.
+- strategi do możliwego dynamicznego podmieniania algorytmu sprawdzania czy dany obrazek jest kopią drugiego
+- dependency inversion, do odwrócenia zależności duplicateCheckera wykorzystanego w duplicateFinderze w celu łatwej podmiany tej funkncionalności, co wykorzystałamn w testach stosując mock komponentu checker testując komponent finder
 
 
 - [x] czy wykorzystano co najmniej trzy wzorce projektowe?
