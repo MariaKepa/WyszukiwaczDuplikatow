@@ -1,4 +1,4 @@
-package com.zaliczenie.projekt;
+package com.zaliczenie.projekt;a
 
 import javafx.scene.image.Image;
 import javafx.scene.image.PixelReader;
