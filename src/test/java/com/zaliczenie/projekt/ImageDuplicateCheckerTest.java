@@ -1,4 +1,4 @@
-package com.zaliczenie.projekt;a
+package com.zaliczenie.projekt;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
