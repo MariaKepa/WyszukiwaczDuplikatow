@@ -1,4 +1,4 @@
-package com.zaliczenie.projekt;a
+package com.zaliczenie.projekt;
 
 
 import java.io.File;
