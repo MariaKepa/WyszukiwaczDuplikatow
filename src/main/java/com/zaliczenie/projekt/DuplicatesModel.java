@@ -1,4 +1,4 @@
-package com.zaliczenie.projekt;a
+package com.zaliczenie.projekt;
 
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleListProperty;
