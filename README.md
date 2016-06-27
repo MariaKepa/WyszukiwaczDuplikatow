@@ -1,5 +1,4 @@
 # WyszukiwaczDuplikatow
-Projekt zaliczeniowy nr 7
 
 Naszym zadaniem było stworzyć program pozwalający na wyszukiwanie duplikatów zdjęć.
 Do stworzenia GUI wykorzystałam JavaFx
